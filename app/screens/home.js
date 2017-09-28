@@ -5,7 +5,7 @@ import {
   Text,
   View,
   Button,
-  TouchableOpacity
+  Alert
 } from 'react-native';
 
 import styles from '../styles';
@@ -36,11 +36,20 @@ class HomeScreen extends Component {
   }
 
   resetValues() {
-    this.setState({
-      choice: '',
-      buttonRender: false,
-      text: '',
-    })
+
+    Alert.alert(
+      'You sure you\'re making a wise decision?',
+      [
+        {text: 'Nope', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {text: 'Yup', onPress: () =>
+        this.setState({
+          choice: '',
+          buttonRender: false,
+          text: '',
+        })},
+      ],
+      { cancelable: true }
+    )
   }
 
   render() {
