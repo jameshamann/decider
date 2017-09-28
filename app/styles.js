@@ -17,18 +17,23 @@ const styles = StyleSheet.create({
     padding: 25,
     textAlign: 'center',
     margin: 10,
-    fontFamily: 'Avenir'
+    fontFamily: 'Avenir',
+    color: 'black',
+
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
+    color: 'black',
     margin: 10,
-    fontFamily: 'Avenir'
+    fontFamily: 'Avenir',
+    fontWeight: 'bold'
+
 
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: 'black',
     marginBottom: 5,
     fontSize: 15,
     padding: 50,

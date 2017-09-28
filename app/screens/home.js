@@ -39,6 +39,7 @@ class HomeScreen extends Component {
 
     Alert.alert(
       'You sure you\'re making a wise decision?',
+      '',
       [
         {text: 'Nope', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
         {text: 'Yup', onPress: () =>
@@ -73,13 +74,13 @@ class HomeScreen extends Component {
         </Text>
         <Text style={styles.instructions}>
         </Text>
-          {button}
         <Text style={styles.welcome}>
           {this.state.choice}
         </Text>
         <Text style={styles.instructions}>
           {this.state.text}
         </Text>
+          {button}
       </View>
     );
   }
